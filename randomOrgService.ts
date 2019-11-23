@@ -80,7 +80,7 @@ export class RandomOrgService {
     }
 
     // LIMITED TO 250000 PER DAY BY API LICENCE
-    private async getNumbersByApiKey(numberOfNumerals: number): Promise<number[]> {
+    public async getNumbersByApiKey(numberOfNumerals: number): Promise<number[]> {
         const requestCounter: number = this.determineRequestCounter(numberOfNumerals)[0];
         const remainder: number = this.determineRequestCounter(numberOfNumerals)[1];
 
